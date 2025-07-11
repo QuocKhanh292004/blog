@@ -1,0 +1,37 @@
+{
+  "name": "block",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --inspect src/index.js",
+    "watch": "sass src/resource/scss:src/public/css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuocKhanh292004/nodejs_blog.git"
+  },
+  "keywords": [
+    "khanh",
+    "blog",
+    "khanh",
+    "blog"
+  ],
+  "author": "khanhdz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuocKhanh292004/nodejs_blog/issues"
+  },
+  "homepage": "https://github.com/QuocKhanh292004/nodejs_blog#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.3",
+    "mongoose": "^8.16.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.10",
+    "sass": "^1.89.0"
+  }
+}
