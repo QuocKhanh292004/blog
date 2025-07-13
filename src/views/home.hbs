@@ -1,11 +1,16 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang Chủ</title>
-  </head>
-  <body>
-    <h1>Xin chào, đây là trang chủ!</h1>
-    <p>Chào mừng bạn đến với blog Node.js sử dụng Handlebars.</p>
-  </body>
-</html>
+<div class="mt-4">
+  <div class="row">
+    {{#each courses}}
+      <div class="col-sm-6 col-lg-4">
+        <div class="card card-course-item" style="width: 18rem;">
+          <img src={{this.image}} class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{this.name}} </h5>
+            <p class="card-text">{{this.description}} </p>
+            <a href="#" class="btn btn-primary"> Mua Khóa Học</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

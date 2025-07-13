@@ -3,11 +3,9 @@ const morgan = require("morgan");
 const { engine } = require("express-handlebars");
 const path = require("path");
 // const { url } = require("inspector");
-
 const db = require("./config/db");
 // connect to db
 db.connect();
-
 const app = express();
 const port = 3000;
 

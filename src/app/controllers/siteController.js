@@ -1,15 +1,15 @@
-// controllers/siteController.js
 const Course = require("../models/Course");
+const { mutipleMongooseToObject } = require("../../util/mongoose");
 
 class siteController {
   // [GET] /
   async index(req, res) {
     try {
       const courses = await Course.find({});
-      console.log(" Dữ liệu truy vấn:", courses);
-      res.json(courses);
+      res.render("home", {
+        courses: mutipleMongooseToObject(courses),
+      });
     } catch (error) {
-      console.error("Lỗi truy vấn Course:", error);
       res.status(500).json({ error: "Lỗi server", details: error.message });
     }
   }
